@@ -10,18 +10,10 @@
                             text: $("#chatText").val()    
                         },
                         function(data, status){
-                            console.log(JSON.strigify(data))
+                            console.log($("#chatText").val())
+                            console.log(JSON.stringify(data))
                         }
                     );
-                    // var node = document.createElement("P");
-                    // node.setAttribute("style", "float: left;");
-                    // node.setAttribute("class", "row chat");
-                    // node.innerHTML = document.getElementById("chatText").value
-                    // var br = document.createElement("BR");
-                    // document.getElementById("chat").appendChild(node)
-                    // document.getElementById("chat").appendChild(br)
-                    // document.getElementById("chat").appendChild(br)
-                    // document.getElementById("chatText").value = ""
                 }
         </script>
     </head>
