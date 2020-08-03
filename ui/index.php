@@ -10,8 +10,8 @@
                             text: $("#chatText").val()    
                         },
                         function(data, status){
-                            console.log($("#chatText").val())
                             console.log(JSON.stringify(data))
+                            window.location.href = "#"
                         }
                     );
                 }
@@ -23,7 +23,7 @@
             <?php
                 include "../server/db.php";
                 if($conn){
-                    $query = "select * from chats ORDER by date DESC";
+                    $query = "select * from chats ORDER by id";
                     $res = mysqli_query($conn, $query);
                     while($data = mysqli_fetch_array($res)){
                         echo "<p class='row chat' style='float: left;'>";

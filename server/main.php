@@ -3,7 +3,7 @@ include "db.php";
 
 if(isset($_POST["text"])){
     $msg = $_POST["text"];
-    $query = mysqli_query($conn, "select * from question where ");
+    $query = mysqli_query($conn, "select * from question where question LIKE '".$msg."%'");
     $count = mysqli_num_rows($query);
     if($count == 0){
         $data = "I am not clear how to help you";
